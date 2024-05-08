@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurpreet's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for lavender color scheme */
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .header-bg, .footer-bg, #about, #contact, #image-gallery {
+            background-color: #7d5775;
+            color: #f9d1d7;
+        }
+        .custom-link {
+            color: #f9d1d7; /* Custom link color */
+        }
+        .custom-link:hover {
+            color: #ecc4d3; /* Custom link hover color */
+        }
+    </style>
+    <script>
+        interact('.profile-picture').draggable({
+            modifiers: [
+                interact.modifiers.restrictRect({
+                    restriction: 'parent'
+                })
+            ],
+            inertia: true,
+            onmove: function (event) {
+                var target = event.target;
+                var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+                var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+                target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+                target.setAttribute('data-x', x);
+                target.setAttribute('data-y', y);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-bg text-light">
+        <div class="container text-center">
+            <h1>Passion and Purpose</h1>
+        </div>
+    </header>
+
+    <section id="about" class="py-5 header-bg text-light">
+        <div class="container">
+            <h2 class="mb-4">About Me</h2>
+            <p>
+                Greetings,
+
+                I am a passionate individual driven by a relentless pursuit of excellence and attention to detail in every endeavor. 
+                My journey, anchored in mechanical engineering with a specialized experience on the structure and design of naval ships, has equipped me with a robust foundation in precision engineering and technical prowess. 
+                However, my trajectory extends far beyond traditional engineering domains, delving into the realms of technology, data science, and collaborative ventures.
+            </p>
+            <p><b>Professional Background</b></p>
+            <p>
+                
+                
+                My professional journey began in the dynamic field of mechanical engineering from MNIT Allahabad, where I contributed to the intricate structure and design of naval ships, showcasing my ability to thrive in high-pressure environments while delivering top-tier results.
+                Building on this experience, I embarked on a transformative path in technology and data science, undertaking a rigorous course from IIIT Banglore. This immersive experience equipped me with advanced skills in data analysis, visualization, and software development, paving the way for diverse project endeavors.
+            </p>   
+            <p>     
+             <b>Projects and Collaborations</b>   
+                </p>
+                <p>
+                My portfolio encompasses a spectrum of projects, ranging from the development of interactive dashboards and websites to the exploration of cutting-edge technologies. Leveraging my expertise, I actively seek collaborative opportunities to drive innovation and create impactful solutions. 
+                Additionally, my internship stint and research paper in Goa provided invaluable insights into real-world applications and fostered a deep appreciation for interdisciplinary collaboration.
+            </p>
+            
+               <p><b>Passions and Interests</b></p> 
+               <p>    
+                Beyond my professional pursuits, I find solace in exploring new horizons and embracing creative outlets. Photography serves as a canvas for capturing life's moments, while video editing allows me to weave compelling narratives. 
+                My penchant for documentaries fuels my curiosity, enriching my understanding of diverse subjects, including history, geography, and political science.
+            </p>  
+            <p><b>Collaborative Spirit</b></p>
+            <p>    
+                
+                
+                I am keen to explore collaborative ventures that harness collective expertise and foster synergistic growth. Whether it's co-creating innovative solutions, embarking on research initiatives, or engaging in knowledge exchange, I am committed to leveraging my skills and experiences to drive meaningful impact.
+            </p>
+        
+        </div>
+    </section>
+
+    <section id="profile-picture" class="text-center py-5">
+        <div class="container">
+            <div class="profile-picture-container">
+                <div class="profile-picture" id="profile-picture">
+                    <img src="gurpreet.jpeg" class="img-fluid" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
+     <section id="image-gallery" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Image Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="image1.jpg" alt="Image 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="image2.jpg" alt="Image 2" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="image3.jpg" alt="Image 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 header-bg text-light">
+        <div class="container">
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Feel free to reach out to me to discuss collaborations, projects, to say hello or to get a Portfolio for yourself ;)</p>
+            <ul>
+                <li>Email: Gur.Sin007@gmail.com</li>
+                <li>Instagram: Gur.Sin007</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/gursin007/" class="custom-link" target="_blank">LinkedIn Profile</a></li>
+                <li>Google maps review: <a href="https://www.google.com/maps/contrib/112304129469458315130/reviews/@23.8538835,72.2193169,6z?entry=ttu"
+                        class="custom-link" target="_blank"> Review of experiences</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer-bg text-light py-4 header-bg">
+        <div class="container text-center">
+            <p>© 2024 Gurpreet Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@interactjs/interactjs@1.10.11/dist/interact.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
